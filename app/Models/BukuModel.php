@@ -9,4 +9,10 @@ class BukuModel extends Model
 {
     use HasFactory;
     public $table = 'buku';
+
+    public $fillable = [
+        'judul',
+        'jumlah'
+    ];
+
 }

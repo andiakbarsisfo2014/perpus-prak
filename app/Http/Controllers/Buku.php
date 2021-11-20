@@ -22,10 +22,16 @@ class Buku extends Controller
 
     public function simpanBuku(Request $request)
     {
-        $model = new BukuModel;
-        $model->judul = $request->judul;
-        $model->jumlah = $request->jumlah;
-        $model->save();
+        //*opsi 1
+        //proses simpan data-buku
+        // $model = new BukuModel;
+        // $model->judul = $request->judul;
+        // $model->jumlah = $request->jumlah;
+        // $model->save();
+        //redirect kehalaman lain setelah success simpan
+
+        //*opsi 2
+        $model = BukuModel::create($request->all());
         return redirect(route('buku'));
     }
 
