@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Buku;
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return "Haiii guyss";
 });
 
 Route::get('daftar-buku', 
